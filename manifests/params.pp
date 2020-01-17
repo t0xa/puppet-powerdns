@@ -21,7 +21,7 @@ class powerdns::params {
   $custom_epel = false
   $default_package_ensure = installed
   $version = '4.1'
-  $http_proxy = undef
+  $apt_key_options = undef
 
   case $facts['os']['family'] {
     'RedHat': {

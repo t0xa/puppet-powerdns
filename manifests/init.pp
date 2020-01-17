@@ -17,7 +17,7 @@ class powerdns (
   Optional[String[1]]        $ldap_method                        = $::powerdns::params::ldap_method,
   Optional[String[1]]        $ldap_binddn                        = $::powerdns::params::ldap_binddn,
   Optional[String[1]]        $ldap_secret                        = $::powerdns::params::ldap_secret,
-  Optional[String[1]]        $http_proxy                         = $::powerdns::params::http_proxy,
+  Optional[String[1]]        $apt_key_options                    = $::powerdns::params::apt_key_options,
   Boolean                    $custom_repo                        = $::powerdns::params::custom_repo,
   Boolean                    $custom_epel                        = $::powerdns::params::custom_epel,
   Enum['4.0', '4.1']          $version                           = $::powerdns::params::version,
