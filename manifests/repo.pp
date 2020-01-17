@@ -61,15 +61,17 @@ class powerdns::repo inherits powerdns {
       # puppet-lint seems to error out on spaces here (bug?) so it looks a bit dodgy
       Class['apt::update']->Package<||>
 
-
+      notice("Setup ${::powerdns::http_proxy}")
 
       if $::powerdns::http_proxy == undef {
+        notice("No proxy...")
         apt::key { 'powerdns':
           ensure => present,
           id     => '9FAAA5577E8FCF62093D036C1B0C6205FD380FBB',
           source => 'https://repo.powerdns.com/FD380FBB-pub.asc',
         }
       } else {
+        notice("Proxy...")
         apt::key { 'powerdns':
           ensure => present,
           id     => '9FAAA5577E8FCF62093D036C1B0C6205FD380FBB',
