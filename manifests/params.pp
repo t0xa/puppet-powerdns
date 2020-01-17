@@ -20,7 +20,7 @@ class powerdns::params {
   $custom_repo = false
   $custom_epel = false
   $default_package_ensure = installed
-  $version = '4.1'
+  $version = '4.3'
   $apt_key_options = undef
 
   case $facts['os']['family'] {
