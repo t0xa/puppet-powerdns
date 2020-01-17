@@ -20,7 +20,6 @@ class powerdns (
   Boolean                    $custom_repo                        = $::powerdns::params::custom_repo,
   Boolean                    $custom_epel                        = $::powerdns::params::custom_epel,
   Enum['4.0','4.1']          $version                            = $::powerdns::params::version,
-  Optional[String[1]]        $http_proxy                         = $::powerdns::params::http_proxy,
   String[1]                  $mysql_schema_file                  = $::powerdns::params::mysql_schema_file,
   String[1]                  $pgsql_schema_file                  = $::powerdns::params::pgsql_schema_file,
 ) inherits powerdns::params {

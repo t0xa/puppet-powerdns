@@ -12,3 +12,5 @@
 .yardoc
 coverage
 .DS_Store
+.idea/*
+*.iml
